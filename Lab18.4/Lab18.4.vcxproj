@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{88e4eff9-3937-4056-9481-857e762e8a23}</ProjectGuid>
-    <RootNamespace>Lab183</RootNamespace>
+    <ProjectGuid>{8b0b8479-5320-4954-8f9b-bd3fb793527e}</ProjectGuid>
+    <RootNamespace>Lab184</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,11 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Lab18.3.cpp" />
-    <ClCompile Include="Money.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Money.h" />
+    <ClCompile Include="Lab18.4.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
