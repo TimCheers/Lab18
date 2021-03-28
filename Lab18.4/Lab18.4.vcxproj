@@ -140,6 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Lab18.4.cpp" />
+    <ClCompile Include="TIME.cpp" />
+    <ClCompile Include="TRIAD.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TIME.h" />
+    <ClInclude Include="TRIAD.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
