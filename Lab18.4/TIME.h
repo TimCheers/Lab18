@@ -1,10 +1,15 @@
 #pragma once
-class TIME
+#include "TRIAD.h"
+class TIME: public TRIAD
 {
 public:
+	TIME();
+	bool operator == (const TIME& other);
+	bool operator != (const TIME& other);
+	bool operator < (const TIME& other);
 private:
-	int hour;
-	int minute;
 	int second;
+	int minute;
+	int hour;
 };
 
