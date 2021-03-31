@@ -19,7 +19,7 @@ public:
 	friend istream& operator >> (istream& in, TRIAD& other);
 protected:
 	int first;
-	int second;
+	int secondH;
 	int third;
 };
 

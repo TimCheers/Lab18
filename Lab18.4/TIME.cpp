@@ -3,9 +3,24 @@
 using namespace std;
 TIME::TIME()
 {
-	this->second = first;
-	this->minute = second;
-	this->hour = third;
+	this->hour = first;
+	this->minute = secondH;
+	if (secondH>60)
+	{
+		this->hour += secondH / 60;
+		this->minute = secondH - (secondH % 60 * 100);
+	}
+	this->second = third;
+	if (third>60)
+	{
+		this->minute += third / 60;
+		this->second = third - (third % 60 * 100);
+	}
+	if (this->minute>60)
+	{
+		this->hour += this->minute / 60;
+		this->minute = this->minute - (this->minute % 60 * 100);
+	}
 }
 bool TIME:: operator == (const TIME& other)
 {
@@ -52,5 +67,94 @@ bool TIME:: operator < (const TIME& other)
 		{
 			return false;
 		}
+	}
+}
+bool TIME:: operator > (const TIME& other)
+{
+	if (this->hour > other.hour)
+	{
+		return true;
+	}
+	else
+	{
+		if (this->hour == other.hour)
+		{
+			if (this->minute > other.minute)
+			{
+				return true;
+			}
+			else
+			{
+				if (this->minute == other.minute)
+				{
+					if (this->second > other.second)
+					{
+						return true;
+					}
+					else
+					{
+						return false;
+					}
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+}
+bool TIME:: operator >= (const TIME& other)
+{
+	if (this->hour >= other.hour)
+	{
+		if (this->minute >= other.minute)
+		{
+			if (this->second >= other.second)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}	
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		return false;
+	}
+}
+bool TIME:: operator <= (const TIME& other)
+{
+	if (this->hour <= other.hour)
+	{
+		if (this->minute <= other.minute)
+		{
+			if (this->second <= other.second)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		return false;
 	}
 }

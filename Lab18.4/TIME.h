@@ -7,6 +7,9 @@ public:
 	bool operator == (const TIME& other);
 	bool operator != (const TIME& other);
 	bool operator < (const TIME& other);
+	bool operator > (const TIME& other);
+	bool operator <= (const TIME& other);
+	bool operator >= (const TIME& other);
 private:
 	int second;
 	int minute;
