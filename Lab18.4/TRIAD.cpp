@@ -59,12 +59,26 @@ ostream& operator << (ostream& out, const TRIAD& other)
 }
 istream& operator >> (istream& in, TRIAD& other)
 {
-	char ch;
-	cout << "first:\t";
-	in >> other.first;
-	cout << "second:\t";
-	in >> other.secondH;
-	cout << "third:\t";
-	in >> other.third;
+	int tmp = -1;
+	while (tmp<0)
+	{
+		cout << "first (hour):\t\t";
+		in >> other.first;
+		tmp = other.first;
+	}
+	tmp = -1;
+	while (tmp<0)
+	{
+		cout << "second (minute):\t";
+		in >> other.secondH;
+		tmp = other.secondH;
+	}
+	tmp = -1;
+	while (tmp<0)
+	{
+		cout << "third (second):\t\t";
+		in >> other.third;
+		tmp = other.third;
+	}
 	return in;
 }

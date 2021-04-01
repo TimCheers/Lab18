@@ -3,23 +3,26 @@
 using namespace std;
 TIME::TIME()
 {
+}
+void TIME::set()
+{
 	this->hour = first;
 	this->minute = secondH;
-	if (secondH>60)
+	if (secondH > 60)
 	{
 		this->hour += secondH / 60;
-		this->minute = secondH - (secondH % 60 * 100);
+		this->minute = secondH % 60;
 	}
 	this->second = third;
-	if (third>60)
+	if (third > 60)
 	{
 		this->minute += third / 60;
-		this->second = third - (third % 60 * 100);
+		this->second = third % 60;
 	}
-	if (this->minute>60)
+	if (this->minute > 60)
 	{
 		this->hour += this->minute / 60;
-		this->minute = this->minute - (this->minute % 60 * 100);
+		this->minute = this->minute % 60;
 	}
 }
 bool TIME:: operator == (const TIME& other)
@@ -157,4 +160,8 @@ bool TIME:: operator <= (const TIME& other)
 	{
 		return false;
 	}
+}
+void TIME :: show() 
+{
+	cout << hour << ':' << minute << ':' << second << endl;
 }
