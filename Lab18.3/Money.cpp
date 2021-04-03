@@ -64,6 +64,18 @@ Money Money :: operator -(const Money& other)
 	}
 	return tmp;
 }
+Money Money :: operator -(const double value)
+{
+	Money tmp;
+	int tmpR = (int)value;
+	int tmpK = (value - tmp.R) * 100;
+	if (this->K < tmpK)
+	{
+		tmp.R--;
+		tmp.K = tmpK - this->K;
+	}
+	return tmp;
+}
 ostream& operator << (ostream& out, const Money& other)
 {
 	return (out << other.R << '.' << other.K);

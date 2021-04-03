@@ -14,6 +14,7 @@ public:
 	bool operator != (const Money& other);
 	Money operator +(const Money& other);
 	Money operator -(const Money& other);
+	Money operator -(const double value);
 	friend ostream& operator << (ostream& out, const Money& other);
 	friend istream& operator >> (istream& in, Money& other);
 private:
