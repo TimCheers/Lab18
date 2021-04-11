@@ -78,6 +78,7 @@ Money Money :: operator -(const double value)
 }
 ostream& operator << (ostream& out, const Money& other)
 {
+
 	return (out << other.R << '.' << other.K);
 }
 istream& operator >> (istream& in, Money& other)
