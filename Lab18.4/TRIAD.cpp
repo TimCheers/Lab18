@@ -26,7 +26,7 @@ TRIAD& TRIAD:: operator = (const TRIAD& other)
 	this->third = other.third;
 	return *this;
 }
-TRIAD::~TRIAD(){}
+TRIAD::~TRIAD() {}
 void TRIAD::ShowTR()
 {
 	cout << "TRAD:\nfirst: " << first << "\nsecond: " << secondH << "\nthird: " << third << endl;
@@ -47,11 +47,11 @@ bool TRIAD:: operator != (const TRIAD& other)
 }
 bool TRIAD:: operator < (const TRIAD& other)
 {
-	return this->first < other.first && this->secondH < other.secondH && this->third < other.third;
+	return this->first < other.first&& this->secondH < other.secondH&& this->third < other.third;
 }
 bool TRIAD:: operator > (const TRIAD& other)
 {
-	return this->first > other.first&& this->secondH > other.secondH&& this->third > other.third;
+	return this->first > other.first && this->secondH > other.secondH && this->third > other.third;
 }
 ostream& operator << (ostream& out, const TRIAD& other)
 {
@@ -60,21 +60,21 @@ ostream& operator << (ostream& out, const TRIAD& other)
 istream& operator >> (istream& in, TRIAD& other)
 {
 	int tmp = -1;
-	while (tmp<0)
+	while (tmp < 0)
 	{
 		cout << "first (hour):\t\t";
 		in >> other.first;
 		tmp = other.first;
 	}
 	tmp = -1;
-	while (tmp<0)
+	while (tmp < 0)
 	{
 		cout << "second (minute):\t";
 		in >> other.secondH;
 		tmp = other.secondH;
 	}
 	tmp = -1;
-	while (tmp<0)
+	while (tmp < 0)
 	{
 		cout << "third (second):\t\t";
 		in >> other.third;

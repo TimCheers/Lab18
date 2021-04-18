@@ -1,6 +1,6 @@
 #pragma once
 #include "TRIAD.h"
-class TIME: public TRIAD
+class TIME : public TRIAD
 {
 public:
 	TIME();
@@ -17,4 +17,3 @@ private:
 	int minute;
 	int hour;
 };
-

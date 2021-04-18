@@ -1,5 +1,6 @@
 #include "Money.h"
 #include <iostream>
+#include <math.h>
 using namespace std;
 Money::Money()
 {
@@ -19,7 +20,7 @@ Money::Money(const Money& other)
 Money::~Money()
 {
 }
-void Money:: show()
+void Money::show()
 {
 	cout << "Ñóììà: " << R << '.' << K << endl;
 }
@@ -60,25 +61,25 @@ Money Money :: operator -(const Money& other)
 	if (this->K < other.K)
 	{
 		tmp.R--;
-		tmp.K = other.K - this->K;
+		tmp.K = 100 - abs(this->K - other.K);
 	}
 	return tmp;
 }
 Money Money :: operator -(const double value)
 {
 	Money tmp;
-	int tmpR = (int)value;
-	int tmpK = (value - tmp.R) * 100;
-	if (this->K < tmpK)
+	int tmpp = (value - int(value)) * 100;
+	tmp.R = this->R - (int)value;
+	tmp.K = this->K - tmpp;
+	if (this->K < tmpp)
 	{
 		tmp.R--;
-		tmp.K = tmpK - this->K;
+		tmp.K = 100 - abs(this->K - tmpp);
 	}
 	return tmp;
 }
 ostream& operator << (ostream& out, const Money& other)
 {
-
 	return (out << other.R << '.' << other.K);
 }
 istream& operator >> (istream& in, Money& other)

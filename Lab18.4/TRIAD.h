@@ -22,4 +22,3 @@ protected:
 	int secondH;
 	int third;
 };
-

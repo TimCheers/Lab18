@@ -18,7 +18,6 @@ public:
 	friend ostream& operator << (ostream& out, const Money& other);
 	friend istream& operator >> (istream& in, Money& other);
 private:
-	unsigned long int R;
-	unsigned int K;
+	long int R;
+	int K;
 };
-

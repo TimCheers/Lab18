@@ -125,7 +125,7 @@ bool TIME:: operator >= (const TIME& other)
 			{
 				return false;
 			}
-		}	
+		}
 		else
 		{
 			return false;
@@ -161,7 +161,7 @@ bool TIME:: operator <= (const TIME& other)
 		return false;
 	}
 }
-void TIME :: show() 
+void TIME::show()
 {
 	cout << hour << ':' << minute << ':' << second << endl;
 }

@@ -27,9 +27,8 @@ int main()
     A2.set();
     A1.show();
     A2.show();
-    cout << "(A1 == A2) " << (A1 == A2)<<endl;
-    cout << "(A1 > A2) " << (A1 > A2)<<endl;
+    cout << "(A1 == A2) " << (A1 == A2) << endl;
+    cout << "(A1 > A2) " << (A1 > A2) << endl;
     cout << "(A1 <= A2) " << (A1 <= A2) << endl;
     return 0;
 }
-
